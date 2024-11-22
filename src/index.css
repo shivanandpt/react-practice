@@ -1,0 +1,183 @@
+/* Light Theme */
+.app.light {
+  --background-color: #f4f4f9;
+  --text-color: #333;
+  --task-bg-color: #fff;
+  --task-border-color: #ddd;
+  --hover-bg-color: #f9f9f9;
+  --completed-bg-color: #e0ffe0;
+  --completed-text-color: #4caf50;
+  --important-task-color: #ff5722;
+}
+
+/* Dark Theme */
+.app.dark {
+  --background-color: #181818;
+  --text-color: #f4f4f9;
+  --task-bg-color: #242424;
+  --task-border-color: #333;
+  --hover-bg-color: #333333;
+  --completed-bg-color: #2e7d32;
+  --completed-text-color: #81c784;
+  --important-task-color: #ff8a65;
+}
+
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: var(--task-bg-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  border: 1px solid var(--task-border-color);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+h1 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Task container */
+.task {
+  display: flex; /* Flexbox for alignment */
+  justify-content: space-between; /* Separate text and delete icon */
+  align-items: center; /* Vertically center items */
+  margin: 10px 0;
+  padding: 15px 20px;
+  border: 1px solid var(--task-border-color);
+  border-radius: 10px; /* Rounded corners */
+  background-color: var(--task-bg-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Adjusted for dark theme visibility */
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.task:hover {
+  background-color: var(--hover-bg-color);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.7); /* Enhanced hover shadow for dark theme */
+}
+
+.app.dark .task {
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1); /* Subtle white shadow for dark backgrounds */
+}
+
+.app.dark .task:hover {
+  box-shadow: 0 6px 10px rgba(255, 255, 255, 0.2); /* Slightly stronger hover shadow */
+}
+
+/* Task text section */
+.task-text {
+  flex-grow: 1; /* Allow the text to take up available space */
+  cursor: pointer; /* Pointer cursor to indicate it's clickable */
+}
+
+.task-text h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: normal;
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+/* Delete section */
+.task-delete {
+  cursor: pointer; /* Pointer cursor for delete icon */
+  display: flex; /* Center the delete icon */
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.delete-icon {
+  font-size: 20px; /* Size of the delete icon */
+  color: var(--text-color); /* Default color */
+}
+
+.task-delete:hover .delete-icon {
+  color: #ff0000; /* Red color on hover */
+  transform: scale(1.2); /* Slight zoom effect */
+}
+
+/* Completed task styling */
+.completed-task {
+  background-color: var(--completed-bg-color);
+  color: var(--completed-text-color);
+  text-decoration: line-through;
+}
+
+.completed-task:hover {
+  background-color: var(--completed-bg-color);
+}
+
+/* Important task indicator */
+.task h3.important-task {
+  color: var(--important-task-color);
+}
+
+/* Theme button styling */
+.theme-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--text-color);
+  background-color: var(--task-bg-color);
+  border: 1px solid var(--task-border-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.theme-button:hover {
+  background-color: var(--hover-bg-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.app.dark .theme-button {
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+.app.dark .theme-button:hover {
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+/* Switch language button styling */
+.swith-language {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--text-color);
+  background-color: var(--task-bg-color);
+  border: 1px solid var(--task-border-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.swith-language:hover {
+  background-color: var(--hover-bg-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.app.dark .swith-language {
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+.app.dark .swith-language:hover {
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
