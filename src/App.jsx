@@ -8,6 +8,7 @@ import { ThemeProvider } from './themes/ThemeContext'
 import store from './store/store'
 import ErrorBoundary from './errorBoundary/ErrorBoundary'
 import Parent from './callChildFun/Parent'
+import TestForm from './reactForm/TestForm'
 
 
 function App() {
@@ -25,8 +26,8 @@ function App() {
           </Provider>
         </LocalizationProvider>
       </ThemeProvider> */}
-      <Parent></Parent>
-
+     {/*  <Parent></Parent> */}
+      <TestForm></TestForm>
     </>
   )
 }
