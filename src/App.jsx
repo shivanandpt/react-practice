@@ -6,19 +6,26 @@ import { LocalizationProvider } from './localization/LocalizationContext'
 import Theme from './themes/component/Theme'
 import { ThemeProvider } from './themes/ThemeContext'
 import store from './store/store'
+import ErrorBoundary from './errorBoundary/ErrorBoundary'
+import Parent from './callChildFun/Parent'
 
 
 function App() {
 
   return (
     <>
-      <ThemeProvider>
+     {/*  <ThemeProvider>
         <LocalizationProvider>
           <Provider store={store}>
-            <Theme></Theme>
+            <ErrorBoundary>
+
+
+              <Theme></Theme>
+            </ErrorBoundary>
           </Provider>
         </LocalizationProvider>
-      </ThemeProvider>
+      </ThemeProvider> */}
+      <Parent></Parent>
 
     </>
   )
