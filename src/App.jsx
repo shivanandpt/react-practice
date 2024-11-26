@@ -9,6 +9,7 @@ import store from './store/store'
 import ErrorBoundary from './errorBoundary/ErrorBoundary'
 import Parent from './callChildFun/Parent'
 import TestForm from './reactForm/TestForm'
+import DynamicForm from './reactForm/DynamicForm'
 
 
 function App() {
@@ -27,7 +28,8 @@ function App() {
         </LocalizationProvider>
       </ThemeProvider> */}
      {/*  <Parent></Parent> */}
-      <TestForm></TestForm>
+      {/* <TestForm></TestForm> */}
+      <DynamicForm></DynamicForm>
     </>
   )
 }
